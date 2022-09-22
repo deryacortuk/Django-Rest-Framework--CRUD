@@ -24,7 +24,7 @@ Install the framework with the following command:
 
     pip install djangorestframework
 
-Edit the settings.py file of the educa project and add rest_framework to the INSTALLED_APPS setting to activate the application, as follows:
+Edit the settings.py file of the your project and add rest_framework to the INSTALLED_APPS setting to activate the application, as follows:
 
     INSTALLED_APPS = [ # ... 'rest_framework', ]
      
