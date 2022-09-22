@@ -16,6 +16,12 @@ class ArticleListView(generics.ListCreateAPIView):
     def get_queryset(self):
         return self.queryset.filter()
     
+class ArticleCreate(generics.CreateAPIView):
+    serializer_class = ArticleSerializers
+    queryset = Article.objects.all()
+    def create(self, request, *args, **kwargs):      
+        return super(ArticleCreate, self).create(request, *args, **kwargs)
+    
 class ArticleDetailView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = ArticleSerializer
     queryset = Article.objects.all()
