@@ -27,7 +27,7 @@ class ArticleDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Article.objects.all()
     lookup_field = 'id'
     
-    def perform_create(self, serializer):
+    def perform_update(self, serializer):
         return serializer.save()
     def get_queryset(self):
         return self.queryset.filter()
