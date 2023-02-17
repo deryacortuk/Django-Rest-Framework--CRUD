@@ -75,15 +75,15 @@ class ArticleDetailView(generics.RetrieveUpdateDestroyAPIView):
     
     
 
-@api_view(['GET'])    
-@permission_classes((permissions.AllowAny,))
-def apiOverview(request):
-    api_urls = {
-        'List':'/list/',
-        'Detail':'/article/<pk>/',
-        'Create':'/article-create/',
-        'Update':'/article-update/<pk>/',
-        'Delete':'/article-delete/<pk>/',
-    }
-    return Response(api_urls)
+# @api_view(['GET'])    
+# @permission_classes((permissions.AllowAny,))
+# def apiOverview(request):
+#     api_urls = {
+#         'List':'/list/',
+#         'Detail':'/article/<pk>/',
+#         'Create':'/article-create/',
+#         'Update':'/article-update/<pk>/',
+#         'Delete':'/article-delete/<pk>/',
+#     }
+#     return Response(api_urls)
     
